@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rentstar/features/pages/home/city_selector_page.dart';
 import 'package:rentstar/features/tab_page.dart';
 
 class Routes{
@@ -8,6 +9,8 @@ class Routes{
     //首页tab
       case RoutePath.tab:
         return pageRoute(TabPage(), settings: setting);
+      case RoutePath.citySelector:
+        return pageRoute(CitySelectorPage());
     }
     return pageRoute(
       Scaffold(
@@ -37,4 +40,6 @@ class Routes{
 class RoutePath{
   // 首页
   static const String tab = "/";
+  // 城市选择页
+  static const String citySelector = "CitySelectorPage";
 }
